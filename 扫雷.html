@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="./扫雷-css/index.css">
+        <script src="./扫雷-js/jquery-1.7.2.min.js"></script>
+        <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="http://libs.baidu.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+        <link href="http://libs.baidu.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    
+    <body>
+        <div id="main" width="500px" style="border:1px solid #c3c3c3; background-image:url(扫雷-css/扫雷-img/hui.jpg);">
+            <div style="position: relative;">
+                <img src="./扫雷-css/扫雷-img/扫雷.jpg">
+                <button class="begin-button" onclick="BeginGame()" style="position: absolute;left: 48%;top: 220px;">开始游戏</button>
+            </div>
+        </div>
+
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">提示框</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="Init(16, 16, 40)">重新开始</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModa2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">自定义难度</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    行数：<input id="col-input" type="text" value=""></br>
+                    列数：<input id="row-input" type="text" value=""></br>
+                    雷数：<input id="bomb-input" type="text" value=""></br>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="BeginGame1()">开始游戏</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="扫雷-js/map.js" charset="utf-8"></script>
+    </body>
+</html>
